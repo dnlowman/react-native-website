@@ -54,7 +54,7 @@ The last configuration step that needs to be done is to setup release builds to 
 android {
     ...
     defaultConfig { ... }
-    signingConfigs {
+    signingConfig {
         release {
             if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
                 storeFile file(MYAPP_UPLOAD_STORE_FILE)
@@ -67,7 +67,7 @@ android {
     buildTypes {
         release {
             ...
-            signingConfig signingConfigs.release
+            signingConfig signingConfig.release
         }
     }
 }
